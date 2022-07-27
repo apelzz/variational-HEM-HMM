@@ -15,13 +15,13 @@ def _ELogLikelihood_Gaussian_wrt_Gaussian(Gaussian_b, Gaussian_r):
     Originally developed in Penny and Roberts (2000).
 
     :param Gaussian_b: The Gaussian component from a GMM in the base model.
-    :type Gaussian_b: scipy.stats.multivariate_normal
+    :type Gaussian_b: models.MultivariateGaussian
 
     :param Gaussian_r: The Gaussian component from a GMM in the reduced model.
-    :type Gaussian_r: scipy.stats.multivariate_normal
+    :type Gaussian_r: models.MultivariateGaussian
 
     :return: The expected log-likelihood of `Gaussian_r` w.r.t. `Gaussian_b`.
-    :rtype: float
+    :rtype: numerical
     """
     return 10.0
 
@@ -44,6 +44,6 @@ def get_eta_hat_18(GaussianMixture_b, m_b, GaussianMixture_r, l_r):
     :type l_r: int
     
     :return: Eta hat for the specified Gaussian's in base and in reduced, respectively.
-    :rtype: float.
+    :rtype: numerical
     """
     return 42.0
